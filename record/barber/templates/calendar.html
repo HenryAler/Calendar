@@ -14,7 +14,7 @@
         <tr>
             <th id='year' colspan="7">
                 
-                {{ month_name }}{{ year }}
+                {{ month_name }} {{ year }}
                 <div class='form'>
                     <button><a class="a-button" href="{% url "calendar" %}">Назад</a></button>
                     <form action={% url "calendar" %} method="post">
