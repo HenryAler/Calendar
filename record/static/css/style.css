@@ -1,0 +1,174 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+  }
+
+.menu {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu a {
+    margin: 30px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: 200ms;
+    transition-duration: .4s;
+}
+
+.menu a:hover {
+    color: rgb(0, 79, 148);
+    font-size: 30px;
+    
+}
+
+.page {
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.left-panel {
+    background-image: url('1.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 400px;
+}
+
+.right-panel {
+    background-image: url('1.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 400px;
+}
+
+
+table {
+    width: 100%;
+    margin: 15px 150px;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-collapse: collapse;
+    border: 5px solid black;
+    background-color: white;
+}
+
+table th {
+    border: 2px solid black;
+}
+
+table td {
+    border: 1px solid black;
+    text-align: center;
+    width: 60px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 40px;
+    transition: .3s ease-in-out;
+}
+
+table td:hover {
+    background-color: red;
+    
+}
+
+caption {
+    text-align: center;
+    font-size: 40px;
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+#year {
+    height: 25%;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 60px;
+}
+
+#saturday {
+    color: red;
+}
+
+#sunday {
+    color: red;
+}
+
+#year:hover {
+    background-color: white;    
+}
+
+footer {
+    width: 100%;
+    height: 70px;
+    background-color: black;
+}
+
+td a {
+    text-decoration: none;
+    color: black;
+    transition: .2s ease-in-out;
+}
+
+td a:hover {
+    color: white;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+button {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    background: rgb(255, 0, 0);
+    border: 2px rgb(255, 0, 0) solid;
+    padding: 5px;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    transition: .7s;
+    /* box-shadow: 5px 5px 20px rgb(0, 104, 240); */
+}
+
+button:hover {
+    background: white;
+    color: black;
+    /* box-shadow: none; */
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: rgb(255, 0, 0);
+}
+
+.a-button {
+    text-decoration: none;
+    color: white;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+}
+.a-button:hover {
+    color: black;
+}
