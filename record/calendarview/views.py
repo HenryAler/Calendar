@@ -59,13 +59,3 @@ def view_calendar(request):
     month_name = month_translation(month_name)[0]
     return render(request, 'calendar.html', {'date': date,  'month': month, 'title': 'calendar', 'year': year, 'month_name': month_name})
     
-
-
-
-def barber_count(request, month, num):
-
-    month = f'{calendar.month_name[month]}'
-    month = month_translation(month)[1]
-    
-
-    return render(request, 'barber.html', {'title': 'barber', 'num': num, 'month': month})

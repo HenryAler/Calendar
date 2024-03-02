@@ -1,7 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div id='barber'>
+<div class='barber_title'>
+    <p>Привет {{ num }} {{ month }}  работают:</p>
+</div>
 
-<p>Привет {{ num }} {{ month }}  работают:</p>
+<div class='barber_work'>
+    {% for i in barbers %}
+
+        {% if i.working == True %}
+            <p>{{ i.barber}}</p>
+        {% endif %} 
+        
+    {% endfor %}
+</div>
+</div>
 
 {% endblock content %}

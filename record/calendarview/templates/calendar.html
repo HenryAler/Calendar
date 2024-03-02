@@ -44,7 +44,7 @@
                     {% if i == 0 %}
                         <td></td>
                     {% else %}
-                        <td><a href='{% url "barber" %}{{ month }}/{{ i }}'>{{ i }}</a></td>
+                        <td><a href='{% url "barber" %}{{ month }}/{{ i }}/{{ year}}'>{{ i }}</a></td>
                     {% endif %}
                 
             {% endfor %}

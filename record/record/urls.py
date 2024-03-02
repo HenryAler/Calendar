@@ -23,7 +23,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('calendarview.urls'))
+    path('', include('calendarview.urls')),
+    path('barber/', include('barber.urls'))
 ]
 
 if settings.DEBUG: 
