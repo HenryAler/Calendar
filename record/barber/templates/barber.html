@@ -1,20 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
+
 <div id='barber'>
+
 <div class='barber_title'>
+
     <p>Привет {{ num }} {{ month }}  работают:</p>
+    
 </div>
 
 <div class='barber_work'>
     {% for i in barbers %}
 
         {% if i.working == True %}
-            <p>{{ i.barber}}</p>
+
+            <div class='barber_foto'>
+
+                <img id='babrber_img' src='{{ MEDIA_URL }}{{ i.barber.foto }}' alt='Фото Мастера'>
+                <p>{{ i.barber}} {{ i.barber.surname }}</p>
+
+            </div>
         {% endif %} 
         
     {% endfor %}
 </div>
+
 </div>
 
 {% endblock content %}

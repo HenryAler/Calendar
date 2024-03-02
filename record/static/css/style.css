@@ -1,4 +1,6 @@
 html, body {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -46,14 +48,12 @@ html, body {
 .left-panel {
     background-image: url('1.jpg');
     background-size: cover;
-    height: 100%;
     width: 400px;
 }
 
 .right-panel {
     background-image: url('1.jpg');
     background-size: cover;
-    height: 100%;
     width: 400px;
 }
 
