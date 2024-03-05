@@ -6,7 +6,7 @@
 
 <div class='barber_title'>
 
-    <p>Привет {{ num }} {{ month }}  работают:</p>
+    <p>{{ num }} {{ month }} работают:</p>
     
 </div>
 
@@ -16,10 +16,12 @@
         {% if i.working == True %}
 
             <div class='barber_foto'>
-
                 <img id='babrber_img' src='{{ MEDIA_URL }}{{ i.barber.foto }}' alt='Фото Мастера'>
                 <p>{{ i.barber}} {{ i.barber.surname }}</p>
-
+                <form action={% url "price" %} method="post">
+                <button type='submit' name='{{ i.barber }}'>Записаться</button>
+                {% csrf_token %}
+                </form>
             </div>
         {% endif %} 
         

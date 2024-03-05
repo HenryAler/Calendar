@@ -1,5 +1,5 @@
 from django.contrib import admin
-from barber.models import Barber, ScheduleBarber
+from barber.models import Barber, ScheduleBarber, Price
 
 
 @admin.register(Barber)
@@ -9,4 +9,9 @@ class BarberAdmin(admin.ModelAdmin):
 
 @admin.register(ScheduleBarber)
 class ScheduleAdmin(admin.ModelAdmin):
-    list_display = ['barber', 'day', 'working']
+    list_display = ['day', 'barber', 'working']
+
+
+@admin.register(Price)
+class PriceAdmin(admin.ModelAdmin):
+    list_display = ['name', 'price']

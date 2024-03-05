@@ -33,3 +33,20 @@ class ScheduleBarber(models.Model):
 
         ordering = ['day']
         verbose_name_plural = 'Расписание'
+
+
+class Price(models.Model):
+
+    name = models.TextField(max_length=100)
+    price = models.FloatField()
+    durations = models.DurationField()
+    barber = models.ManyToManyField(Barber)
+
+    def __str__(self):
+
+        return 'Услуга'
+    
+    class Meta():
+        ordering = ['name']
+        verbose_name_plural = 'Услуги'
+    

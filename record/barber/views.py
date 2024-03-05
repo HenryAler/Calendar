@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from calendarview.views import month_translation
 import calendar
-from .models import ScheduleBarber
+from .models import ScheduleBarber, Price, Barber
 
 
 
@@ -16,3 +16,16 @@ def barber_count(request, month, num, year):
         print(i.barber.foto)
 
     return render(request, 'barber.html', {'title': 'barber', 'num': num, 'month': month, 'year': year, 'barbers': barbers})
+
+
+def price(request, **kwargs):
+
+    if request.method == 'POST':
+
+        barber = list(request.POST.keys())[0]
+        barber_id = Barber.objects.filter(name=barber)
+        for id in barber_id:
+            price = Price.objects.filter(barber=id)
+            
+            return render(request, 'price.html', {'price': price})
+        

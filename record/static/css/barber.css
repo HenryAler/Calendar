@@ -24,9 +24,10 @@
     flex-direction: column;
     margin: 30px;
     border: 3px solid rgb(0, 0, 0);
-    border-radius: 1cap;
+    border-radius: 0.5cap;
     background-color: white;
     text-align: center;
+    align-items: center;
     
 }
 
@@ -34,11 +35,19 @@
     width: 200px;
     height: 200px;
     border: 3px solid rgb(0, 0, 0);
-    border-radius: 1rcap;
+    border-radius: 0.5rcap;
     margin: 20px;
 }
 
 .barber_foto p {
-    margin-bottom: 40px;
     font-size: 20px;
+}
+.barber_work a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.barber_foto button {
+    margin: 0 0  20px 0 !important;
+    margin-bottom: 30px;
+    padding: 10px 50px;
 }

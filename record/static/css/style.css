@@ -3,7 +3,7 @@ html, body {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: -webkit-fill-available;
     width: 100%;
 }
 

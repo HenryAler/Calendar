@@ -1,0 +1,17 @@
+.price {
+    width: 100%;
+    
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 0.4cap;
+}
+
+.inner p {
+    margin: 10px;
+}
