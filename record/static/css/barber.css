@@ -19,7 +19,6 @@
 }
 
 .barber_foto {
-
     display: flex;
     flex-direction: column;
     margin: 30px;
@@ -28,7 +27,7 @@
     background-color: white;
     text-align: center;
     align-items: center;
-    
+
 }
 
 .barber_foto img {
@@ -42,12 +41,14 @@
 .barber_foto p {
     font-size: 20px;
 }
+
 .barber_work a {
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
+
 .barber_foto button {
-    margin: 0 0  20px 0 !important;
+    margin: 0 0 20px 0 !important;
     margin-bottom: 30px;
     padding: 10px 50px;
 }

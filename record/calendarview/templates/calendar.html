@@ -16,10 +16,10 @@
                 
                 {{ month_name }} {{ year }}
                 <div class='form'>
-                    <button><a class="a-button" href="{% url "calendar" %}">Назад</a></button>
-                    <form action={% url "calendar" %} method="post">
-                        {% csrf_token %}
+                    <button><a class="a-button" href="{% url 'calendar' %}">Назад</a></button>
+                    <form action='{% url "calendar" %}' method="post">
                         <button name='{{ month }}' type="submit" value='{{ year }}'>Вперёд</button>
+                        {% csrf_token %}
                     </form> 
                 
             </div>

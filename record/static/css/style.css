@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -9,7 +10,7 @@ html, body {
 
 ::-webkit-scrollbar {
     width: 0;
-  }
+}
 
 .menu {
     width: 100%;
@@ -33,7 +34,6 @@ html, body {
 .menu a:hover {
     color: rgb(0, 79, 148);
     font-size: 30px;
-    
 }
 
 .page {
@@ -84,7 +84,6 @@ table td {
 
 table td:hover {
     background-color: red;
-    
 }
 
 caption {
@@ -110,7 +109,7 @@ caption {
 }
 
 #year:hover {
-    background-color: white;    
+    background-color: white;
 }
 
 footer {
@@ -135,6 +134,7 @@ td a:hover {
     margin-left: 20px;
     margin-right: 20px;
 }
+
 button {
     display: flex;
     justify-content: center;
@@ -151,13 +151,11 @@ button {
     color: white;
     font-size: 15px;
     transition: .7s;
-    /* box-shadow: 5px 5px 20px rgb(0, 104, 240); */
 }
 
 button:hover {
     background: white;
     color: black;
-    /* box-shadow: none; */
     border: 2px solid;
     border-radius: 5px;
     border-color: rgb(255, 0, 0);
@@ -166,9 +164,8 @@ button:hover {
 .a-button {
     text-decoration: none;
     color: white;
-    /* padding-left: 10px;
-    padding-right: 10px; */
 }
+
 .a-button:hover {
     color: black;
 }

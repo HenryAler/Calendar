@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class='price'>
-    <div class='inner'>
-    {% for i in price %}
-        <p>{{ i.name }}</p>
-    {% endfor %}
+    <div class="box">
+
+        
+        <h1>{{ barber }}</h1>
+        
+            <div class='inner'>
+                {% for i in price %}
+                <p>{{ i.name }}</p>
+                <p>{{ i.price }} рублей.</p>
+                {% endfor %}
+        </div>    
     </div>
-</div>    
 {% endblock %}

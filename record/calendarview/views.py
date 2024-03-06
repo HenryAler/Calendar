@@ -43,8 +43,8 @@ def view_calendar(request):
 
     if request.method == 'POST':
         
-        month = int(list(request.POST.keys())[1]) + 1
-        year = int(list(request.POST.values())[1])
+        month = int(list(request.POST.keys())[0]) + 1
+        year = int(list(request.POST.values())[0])
         
         if month > 12:
             month = 1
