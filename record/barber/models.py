@@ -37,16 +37,16 @@ class ScheduleBarber(models.Model):
 
 class Price(models.Model):
 
-    name = models.TextField(max_length=100)
-    price = models.FloatField()
-    durations = models.DurationField()
-    barber = models.ManyToManyField(Barber)
+    name = models.CharField(max_length=255, verbose_name='Услуга')
+    price = models.FloatField(verbose_name='Цена')
+    durations = models.DurationField(verbose_name='Продолжительность')
+    barber = models.ManyToManyField(Barber, verbose_name='Мастер')
 
     def __str__(self):
 
-        return 'Услуга'
+        return 'Прайс лист'
     
     class Meta():
         ordering = ['name']
-        verbose_name_plural = 'Услуги'
+        verbose_name_plural = 'Прайс лист'
     
