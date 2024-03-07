@@ -4,13 +4,17 @@
     <div class="box">
 
         
-        <h1>{{ barber }}</h1>
         
-            <div class='inner'>
+        <table id='pricelist'>
+            <th colspan='2'>{{ barber }}</th>
+                    <tbody>
                 {% for i in price %}
-                <p>{{ i.name }}</p>
-                <p>{{ i.price }} рублей.</p>
+                <tr>
+                    <td>{{ i.name }}</td>
+                    <td>{{ i.price }} рублей.</td>
+                </tr>
                 {% endfor %}
-        </div>    
+                    </tbody>
+                </table>
     </div>
 {% endblock %}

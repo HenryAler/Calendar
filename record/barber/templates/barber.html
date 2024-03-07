@@ -20,7 +20,7 @@
                 <img id='babrber_img' src='{{ MEDIA_URL }}{{ i.barber.foto }}' alt='Фото Мастера'>
                 <p>{{ i.barber}} {{ i.barber.surname }}</p>
                 <form action='{% url "price" %}' method="post">
-                <button type='submit' name='{{ i.barber }}' values='{{ i.barber.surname }}'>Записаться</button>
+                <button type='submit' name='{{ i.barber }}'>Записаться</button>
                 {% csrf_token %}
                 </form>
             </div>

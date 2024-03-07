@@ -39,23 +39,24 @@ def month_translation(month_name):
     
     return dict_month.get(month_name)
 
+
 def view_calendar(request):
 
     if request.method == 'POST':
-        
         month = int(list(request.POST.keys())[0]) + 1
         year = int(list(request.POST.values())[0])
-        
         if month > 12:
             month = 1
             year += 1
         month_name, date = get_data(year, month)
         month_name = month_translation(month_name)[0]
+
         return render(request, 'calendar.html', {'date': date, 'month': month, 'title': 'calendar', 'year': year, 'month_name': month_name})
         
     year = time.localtime().tm_year
     month = time.localtime().tm_mon
     month_name, date = get_data(year, month)
     month_name = month_translation(month_name)[0]
+
     return render(request, 'calendar.html', {'date': date,  'month': month, 'title': 'calendar', 'year': year, 'month_name': month_name})
     

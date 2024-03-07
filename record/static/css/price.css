@@ -1,23 +1,34 @@
 .box {
     display: flex;
-    flex-direction: column;
     width: 100%;
+    height: fit-content;
 }
 
 .inner {
     display: flex;
     flex-direction: column;
     margin: 40px;
+    padding: 20px;
     background-color: white;
     border: 5px solid black;
     border-radius: 0.4cap;
 }
 
-.inner p {
-    margin: 10px;
-}
-
 h1 {
     text-align: center;
+    font-size: 40px;
+}
+
+.box #pricelist{
+    margin: 50px 10px;
+    width: 100%;
+    border-collapse: collapse;
+    border: 5px solid black;
+    background-color: white;
+}
+.box #pricelist td {
     font-size: 24px;
+}
+.box #pricelist th {
+    font-size: 34px;
 }

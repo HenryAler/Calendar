@@ -16,13 +16,11 @@ def barber_count(request, month, num, year):
 
 
 def price(request, **kwargs):
-
     if request.method == 'POST':
-
         barber = list(request.POST.keys())[0]
         barber_id = Barber.objects.filter(name=barber)
         for id in barber_id:
             price = Price.objects.filter(barber=id)
             
-        return render(request, 'price.html', {'price': price, 'barber': barber})
+        return render(request, 'price.html', {'title': 'PriceList', 'price': price, 'barber': barber})
         
