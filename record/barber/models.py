@@ -23,7 +23,10 @@ class ScheduleBarber(models.Model):
 
     day = models.DateField(null=True, verbose_name='День')
     barber = models.ManyToManyField(Barber, verbose_name='Мастер')
-    working = models.BooleanField(default=False, verbose_name='Работает да/нет')
+    
+    def __str__(self):
+
+        return 'Расписание'
     
     class Meta():
 

@@ -13,9 +13,12 @@ class BarberAdmin(admin.ModelAdmin):
 @admin.register(ScheduleBarber)
 class ScheduleAdmin(admin.ModelAdmin):
 
-    list_display = ['day', 'get_barber2','working']
+    list_display = ['day', 'get_barber2']
     list_filter = ['day', 'barber']
     search_fields = ['barber']
+    autocomplete_fields = ['barber']
+
+    @admin.display(description='Работают')
     def get_barber2(self, obj):
         return [barber.name for barber in obj.barber.all()]
 
@@ -23,8 +26,11 @@ class ScheduleAdmin(admin.ModelAdmin):
 @admin.register(Price)
 class PriceAdmin(admin.ModelAdmin):
     
-    list_display = ['name', 'price', 'durations', 'get_barber']
+    list_display = ['name', 'price', 'get_barber', 'durations']
     list_filter = ['name']
     search_fields = ['name']
+    autocomplete_fields = ['barber']
+
+    @admin.display(description='Мастера')
     def get_barber(self, obj):
         return [barber.name for barber in obj.barber.all()]
