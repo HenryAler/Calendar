@@ -22,12 +22,8 @@ class Barber(models.Model):
 class ScheduleBarber(models.Model):
 
     day = models.DateField(null=True, verbose_name='День')
-    barber = models.ForeignKey(Barber, on_delete=models.CASCADE, verbose_name='Мастер')
+    barber = models.ManyToManyField(Barber, verbose_name='Мастер')
     working = models.BooleanField(default=False, verbose_name='Работает да/нет')
-
-    def __str__(self):
-
-        return 'Расписание работы мастеров'
     
     class Meta():
 

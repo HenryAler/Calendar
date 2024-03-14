@@ -12,12 +12,13 @@
 
         <table>
 
-            <th colspan='2'>{{ barber }}</th>
+            <th colspan='3'>{{ barber }}</th>
 
                 {% for i in price %}
                     <tr>
                         <td>{{ i.name }}</td>
                         <td>{{ i.price }} рублей.</td>
+                        <td>{{ i.durations | truncatechars_html:5 }} часа.</td>
                     </tr>
 
                 {% endfor %}

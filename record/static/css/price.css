@@ -16,8 +16,10 @@ table td {
     text-align: center;
     border: 1px solid black;
     font-size: 24px;
+    padding: 10px;
 }
 table th {
     border: 1px solid black;
     font-size: 34px;
+    padding: 20px;
 }
