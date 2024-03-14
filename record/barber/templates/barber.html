@@ -1,35 +1,39 @@
 {% extends "base.html" %}
+{% load static %}
+{% block head %}
+<link rel='stylesheet' href="{% static 'css/barber.css' %}" type='text/css' />
+{% endblock %}
 
 
 {% block content %}
 
-<div id='barber'>
+<section class='barber'>
 
-<div class='barber_title'>
+    <div class='barber_title'>
 
-    <p>{{ num }} {{ month }} работают:</p>
-    
-</div>
-
-<div class='barber_work'>
-    
-    {% for i in barbers %}
-
-        {% if i.working == True %}
-
-            <div class='barber_foto'>
-                <img id='babrber_img' src='{{ MEDIA_URL }}{{ i.barber.foto }}' alt='Фото Мастера' width=300 height=auto loading: lazy;>
-                <p>{{ i.barber}} {{ i.barber.surname }}</p>
-                <form action='{% url "price" %}' method="post">
-                <button type='submit' name='{{ i.barber }}'>Записаться</button>
-                {% csrf_token %}
-                </form>
-            </div>
-        {% endif %} 
+        <p>{{ num }} {{ month }} работают:</p>
         
-    {% endfor %}
-</div>
+    </div>
 
-</div>
+    <div class='barber_work'>
+        
+        {% for i in barbers %}
+
+            {% if i.working == True %}
+
+                <div class='barber_foto'>
+                    <img id='babrber_img' src='{{ MEDIA_URL }}{{ i.barber.foto }}' alt='Фото Мастера' width=300 height=auto loading: lazy>
+                    <p>{{ i.barber}} {{ i.barber.surname }}</p>
+                    <form action='{% url "price" %}' method="post">
+                    <button type='submit' name='{{ i.barber }}'>Записаться</button>
+                    {% csrf_token %}
+                    </form>
+                </div>
+            {% endif %} 
+            
+        {% endfor %}
+    </div>
+
+</section>
 
 {% endblock content %}

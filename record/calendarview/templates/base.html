@@ -1,14 +1,14 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href="{% static 'css/style.css' %}" type='text/css' />
-    <link rel='stylesheet' href="{% static 'css/barber.css' %}" type='text/css' />
-    <link rel='stylesheet' href="{% static 'css/price.css' %}" type='text/css' />
     <title>{{ title }}</title> 
-</head>
+    </head>
+    {% block head %}
+    {% endblock %}
 
 <body>
 
@@ -28,7 +28,7 @@
 
              {% block content %}
              
-             {% endblock content%}
+             {% endblock %}
             
         <div class='right-panel'></div>
     </section>

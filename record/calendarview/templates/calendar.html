@@ -1,6 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
 
-
+{% block head %}
+<link rel='stylesheet' href="{% static 'css/calendar.css' %}" type='text/css' />
+{% endblock %}
 
 {% block content %}
 

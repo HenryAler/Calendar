@@ -64,84 +64,6 @@ ul {
     margin-left: 30px;
 }
 
-
-table {
-    width: 70%;
-    height: 700px;
-    margin-bottom: 120px;
-    padding-bottom: 20px;
-    border-collapse: collapse;
-    border: 5px solid black;
-    background-color: white;
-}
-
-table th {
-    border: 2px solid black;
-}
-
-table td {
-    border: 1px solid black;
-    text-align: center;
-    width: 60px;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 40px;
-    transition: .3s ease-in-out;
-}
-
-table td:hover {
-    background-color: red;
-}
-
-caption {
-    text-align: center;
-    font-size: 40px;
-    margin: 20px;
-    margin-bottom: 40px;
-}
-
-#year {
-    height: 25%;
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 60px;
-}
-
-#saturday {
-    color: red;
-}
-
-#sunday {
-    color: red;
-}
-
-#year:hover {
-    background-color: white;
-}
-
-footer {
-    width: 100%;
-    height: 70px;
-    background-color: black;
-}
-
-td a {
-    text-decoration: none;
-    color: black;
-    transition: .2s ease-in-out;
-}
-
-td a:hover {
-    color: white;
-}
-
-.form {
-    display: flex;
-    justify-content: center;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
 button {
     display: flex;
     justify-content: center;
@@ -175,4 +97,10 @@ button:hover {
 
 .a-button:hover {
     color: black;
+}
+
+footer {
+    width: 100%;
+    height: 70px;
+    background-color: black;
 }

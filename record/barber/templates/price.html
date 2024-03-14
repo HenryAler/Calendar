@@ -1,20 +1,29 @@
 {% extends "base.html" %}
 
+{% load static %}
+
+{% block head %}
+    <link rel='stylesheet' href="{% static 'css/price.css' %}" type='text/css' />
+{% endblock %}
+
 {% block content %}
+
     <div class="box">
 
-        
-        
-        <table id='pricelist'>
+        <table>
+
             <th colspan='2'>{{ barber }}</th>
-                    <tbody>
+
                 {% for i in price %}
-                <tr>
-                    <td>{{ i.name }}</td>
-                    <td>{{ i.price }} рублей.</td>
-                </tr>
+                    <tr>
+                        <td>{{ i.name }}</td>
+                        <td>{{ i.price }} рублей.</td>
+                    </tr>
+
                 {% endfor %}
-                    </tbody>
-                </table>
+
+        </table>
+
     </div>
+
 {% endblock %}

@@ -1,4 +1,8 @@
-#barber {
+html {
+    height: auto;
+}
+
+.barber {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -16,6 +20,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 30px;
+    justify-content: center;
 }
 
 .barber_foto {
@@ -40,10 +45,6 @@
     font-size: 20px;
 }
 
-.barber_work a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
 
 .barber_foto button {
     margin: 0 0 20px 0 !important;
