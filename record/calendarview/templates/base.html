@@ -12,15 +12,17 @@
 
 <body>
 
-    <div class='menu'>
-        <a href='/'>Home</a>
-        <a href='#'>Contact</a>
-        <a href='{% url "calendar" %}'>Calendar</a> 
-        <a href='#'>Picture</a>
-        <a href='#'>About</a>
-    </div>
+    <nav class='menu'>
+        <ul>
+            <li><a href='/'>Home</a></li>
+            <li><a href='#'>Contact</a></li>
+            <li><a href='{% url "calendar" %}'>Calendar</a></li> 
+            <li><a href='#'>Picture</a></li>
+            <li><a href='#'>About</a></li>
+        </ul>
+    </nav>
 
-    <div class='page'>
+    <section class='page'>
     
         <div class='left-panel'></div>
 
@@ -29,9 +31,11 @@
              {% endblock content %}
             
         <div class='right-panel'></div>
-    </div>
+    </section>
 
-    <footer></footer>
+    <footer>
+
+    </footer>
     
 </body>
 </html>

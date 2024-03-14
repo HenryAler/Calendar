@@ -31,8 +31,6 @@
 }
 
 .barber_foto img {
-    width: 200px;
-    height: 200px;
     border: 3px solid rgb(0, 0, 0);
     border-radius: 0.5rcap;
     margin: 20px;
