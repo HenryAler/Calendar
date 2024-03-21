@@ -19,8 +19,6 @@
         
         {% for i in barbers %}
 
-            {% comment %} {% if i.working == True %} {% endcomment %}
-
                 <div class='barber_foto'>
                     <img id='babrber_img' src='{{ MEDIA_URL }}{{ i.foto }}' alt='Фото Мастера' width=300 height=auto loading: lazy>
                     <p>{{ i.name}} {{ i.surname }}</p>
@@ -29,7 +27,6 @@
                     {% csrf_token %}
                     </form>
                 </div>
-            {% comment %} {% endif %}  {% endcomment %}
             
         {% endfor %}
     </div>

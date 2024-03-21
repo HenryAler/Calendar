@@ -2,6 +2,7 @@
     display: flex;
     width: 100%;
     height: fit-content;
+    flex-direction: column;
 }
 
 table {
@@ -12,14 +13,27 @@ table {
     border: 5px solid black;
     background-color: white;
 }
+
 table td {
     text-align: center;
     border: 1px solid black;
     font-size: 24px;
     padding: 10px;
 }
+
 table th {
     border: 1px solid black;
     font-size: 34px;
     padding: 20px;
+}
+
+form {
+    margin-top: 100px;
+}
+
+form #id_time {
+    margin: 30px;
+}
+form #id_service {
+    margin: 30px;
 }

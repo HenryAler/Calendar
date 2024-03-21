@@ -8,7 +8,7 @@
 
 {% block content %}
 
-    <div class="box">
+    {% comment %} <div class="box">
 
         <table>
 
@@ -23,8 +23,16 @@
 
                 {% endfor %}
 
-        </table>
+                
+            </table>
+            
+        </div> {% endcomment %}
 
-    </div>
+
+        <form action="request_form" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Submit">
+        </form>
 
 {% endblock %}

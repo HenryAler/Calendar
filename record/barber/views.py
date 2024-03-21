@@ -3,6 +3,8 @@ from calendarview.views import month_translation
 import calendar
 from .models import ScheduleBarber, Price, Barber
 from django.shortcuts import redirect
+from barber.forms import RecordForm
+from django.http import HttpResponseRedirect
 
 
 
@@ -21,9 +23,21 @@ def barber_count(request, month, num, year):
 def price(request):
 
     if request.method == 'POST':
+        form = RecordForm(request.POST)
+
+        if form.is_valid():
+            return HttpResponseRedirect('price/Thanks/')
+        else:
+            form = RecordForm()
+            
+
         barber = list(request.POST.keys())[0]
         barber_id = Barber.objects.filter(name=barber)
+
         for id in barber_id:
+            form.fields['service'].queryset = Price.objects.filter(barber=id)
             price = Price.objects.filter(barber=id)
-        return render(request, 'price.html', {'title': 'PriceList', 'price': price, 'barber': barber})
-        
+
+            
+
+        return render(request, 'price.html', {'title': 'PriceList', 'price': price, 'barber': barber, 'form': form})

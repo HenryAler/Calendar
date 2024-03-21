@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href="{% static 'css/style.css' %}" type='text/css' />
     <title>{{ title }}</title> 
-    </head>
     {% block head %}
     {% endblock %}
+</head>
 
 <body>
-
+    <header>
     <nav class='menu'>
         <ul>
             <li><a href='/'>Home</a></li>
@@ -21,7 +21,7 @@
             <li><a href='#'>About</a></li>
         </ul>
     </nav>
-
+    </header>
     <section class='page'>
     
         <div class='left-panel'></div>

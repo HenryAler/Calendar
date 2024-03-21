@@ -43,7 +43,7 @@ class Price(models.Model):
 
     def __str__(self):
 
-        return 'Прайс лист'
+        return self.name
     
     class Meta():
         ordering = ['name']
