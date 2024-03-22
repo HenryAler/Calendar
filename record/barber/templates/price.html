@@ -8,31 +8,34 @@
 
 {% block content %}
 
-    {% comment %} <div class="box">
-
-        <table>
-
-            <th colspan='3'>{{ barber }}</th>
-
-                {% for i in price %}
-                    <tr>
-                        <td>{{ i.name }}</td>
-                        <td>{{ i.price }} рублей.</td>
-                        <td>{{ i.durations | truncatechars_html:5 }} часа.</td>
-                    </tr>
-
-                {% endfor %}
-
-                
-            </table>
-            
-        </div> {% endcomment %}
-
-
-        <form action="request_form" method="post">
-            {% csrf_token %}
-            {{ form }}
-            <input type="submit" value="Submit">
-        </form>
+<div class='box-form'>
+    
+    <form action="request_form" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input class='btn-input' type="submit" value="Submit">
+        <input name='barber' type='hidden' value='{{ barber }}'>
+    </form>
+    
+</div>
 
 {% endblock %}
+{% comment %} <div class="box">
+
+    <table>
+
+        <th colspan='3'>{{ barber }}</th>
+
+            {% for i in price %}
+                <tr>
+                    <td>{{ i.name }}</td>
+                    <td>{{ i.price }} рублей.</td>
+                    <td>{{ i.durations | truncatechars_html:5 }} часа.</td>
+                </tr>
+
+            {% endfor %}
+
+            
+        </table>
+        
+    </div> {% endcomment %}

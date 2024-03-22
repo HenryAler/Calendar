@@ -1,5 +1,5 @@
 from django.contrib import admin
-from barber.models import Barber, ScheduleBarber, Price
+from barber.models import Barber, ScheduleBarber, Price, WorkList
 
 
 @admin.register(Barber)
@@ -34,3 +34,9 @@ class PriceAdmin(admin.ModelAdmin):
     @admin.display(description='Мастера')
     def get_barber(self, obj):
         return [barber.name for barber in obj.barber.all()]
+    
+
+@admin.register(WorkList)
+class WorkListAdmin(admin.ModelAdmin):
+    list_display = ['name','time', 'service', 'barber', 'email']
+    list_filter = ['barber', 'time']

@@ -1,6 +1,7 @@
 from django.db import models
 import datetime
 
+
 class Barber(models.Model):
 
     name = models.CharField(max_length=15, verbose_name='Имя')
@@ -48,4 +49,20 @@ class Price(models.Model):
     class Meta():
         ordering = ['name']
         verbose_name_plural = 'Прайс лист'
+
+
+class WorkList(models.Model):
+
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    time = models.CharField(max_length=255)
+    service = models.CharField(max_length=255)
+    barber = models.CharField(max_length=255)
+
+    def __str__(self):
+
+        return self.barber
     
+    class Meta():
+        ordering = ['time']
+        verbose_name_plural = 'Клиенты'

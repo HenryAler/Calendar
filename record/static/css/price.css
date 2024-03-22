@@ -28,12 +28,48 @@ table th {
 }
 
 form {
-    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    margin: 3em;
 }
 
-form #id_time {
-    margin: 30px;
+.box-form {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: max-content;
+    background-color: white;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 2rcap;
 }
-form #id_service {
-    margin: 30px;
+.btn-input {
+    margin: 20px;
+    padding: 10px 30px;
+    border: 2px solid red;
+    border-radius: .7rcap;
+    color: white;
+    background-color: red;
+    font-size: 1.1em;
+}
+
+input {
+    margin: 20px;
+    border: 2px solid red;
+    border-radius: .7rcap;
+    padding: 1em 1.5em;
+    font-size: .9em;
+}
+select {
+    margin: 20px;
+    background-color: white;
+    border: 2px solid red;
+    border-radius: .7rcap;
+    padding: 1em;
+    font-size: .9em;
+}
+
+label {
+    font-size: 1.2em;
+    margin-right: 1.1em;
 }
