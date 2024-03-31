@@ -1,10 +1,11 @@
 from django import forms
-from .models import Barber, Price
+from .models import Price
 
 
 class RecordForm(forms.Form):
+    
     name = forms.CharField(label='Имя', max_length=255)
-    email = forms.EmailField(label='Email')
+    phone = forms.IntegerField(label='Телефон')
     time = forms.TimeField(label='Время')
     service = forms.ModelChoiceField(label='Услуга', queryset=None, empty_label='Выберите услугу')
 

@@ -54,7 +54,7 @@ class Price(models.Model):
 class WorkList(models.Model):
 
     name = models.CharField(max_length=255)
-    email = models.EmailField()
+    phone = models.IntegerField(null=True)
     time = models.CharField(max_length=255)
     service = models.CharField(max_length=255)
     barber = models.CharField(max_length=255)

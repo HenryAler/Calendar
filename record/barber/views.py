@@ -27,10 +27,10 @@ def price(request):
             data = form.cleaned_data
             WorkList.objects.create(
                 name = data['name'],
-                email = data['email'],
+                phone = data['phone'],
                 time = data['time'],
                 service = data['service'],
-                barber = list(request.POST.items())[3][1]
+                barber = list(request.POST.items())[5][1]
             )
             return redirect('calendar')
         else:

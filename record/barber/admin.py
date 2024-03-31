@@ -38,5 +38,5 @@ class PriceAdmin(admin.ModelAdmin):
 
 @admin.register(WorkList)
 class WorkListAdmin(admin.ModelAdmin):
-    list_display = ['name','time', 'service', 'barber', 'email']
+    list_display = ['name','time', 'service', 'barber', 'phone']
     list_filter = ['barber', 'time']
