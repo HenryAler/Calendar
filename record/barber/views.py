@@ -4,7 +4,7 @@ import calendar
 from .models import ScheduleBarber, Price, Barber, WorkList
 from django.shortcuts import redirect
 from barber.forms import RecordForm
-from barber.sms import send_sms
+from barber.send_sms import send_sms
 
 
 def barber_count(request, month, num, year):
